@@ -32,6 +32,8 @@ export const Login = () => {
     e.preventDefault();
     setSubmitted(true);
     if (email && password) {
+
+      // @ts-ignore
       const { from } = location.state || { from: { pathname: '/' } };
       dispatch(login(email, password, from));
     }
